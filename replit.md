@@ -89,6 +89,12 @@ Changelog:
 - July 08, 2025: Created 11 projects with placeholder links for user to fill
 - July 08, 2025: Added video demo sections for computer vision projects
 - July 08, 2025: Set up structured link areas (LinkedIn, GitHub, Demo/Video)
+- July 08, 2025: Restructured navbar to full-width with "Portfolio" logo
+- July 08, 2025: Redesigned hero section layout (profile left, content right on desktop)
+- July 08, 2025: Added LOR documents from Corizo and Prodigy InfoTech to experience section
+- July 08, 2025: Implemented "View Credentials" button showing certificates side-by-side
+- July 08, 2025: Enhanced Three.js background with continuous multi-axis animations
+- July 08, 2025: Added objective section and restructured hero content flow
 ```
 
 ## User Preferences

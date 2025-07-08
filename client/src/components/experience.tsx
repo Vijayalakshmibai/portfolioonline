@@ -99,8 +99,58 @@ export function Experience() {
             ))}
           </div>
 
-          {/* Certifications */}
+          {/* Letters of Recommendation */}
           <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-8 text-center text-purple-400">
+              Letters of Recommendation
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <Card 
+                className="bg-gray-800 border-gray-700 cursor-pointer hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 project-card"
+                onClick={() => window.open('/attached_assets/LOR Corizo_1751970728640.pdf', '_blank')}
+              >
+                <CardContent className="p-4 flex items-center">
+                  <Award className="h-6 w-6 mr-4 text-indigo-400" />
+                  <div className="flex-1">
+                    <h4 className="font-semibold">Corizo Edutech</h4>
+                    <p className="text-gray-400 text-sm">Letter of Recommendation - Web Development</p>
+                  </div>
+                  <div className="text-gray-400 text-sm">
+                    View PDF
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card 
+                className="bg-gray-800 border-gray-700 cursor-pointer hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 project-card"
+                onClick={() => window.open('/attached_assets/prodigy infotech Letter of Recommendation_1751970745885.pdf', '_blank')}
+              >
+                <CardContent className="p-4 flex items-center">
+                  <Award className="h-6 w-6 mr-4 text-purple-400" />
+                  <div className="flex-1">
+                    <h4 className="font-semibold">Prodigy InfoTech</h4>
+                    <p className="text-gray-400 text-sm">Letter of Recommendation - Web Development Intern</p>
+                  </div>
+                  <div className="text-gray-400 text-sm">
+                    View PDF
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* View Credentials Button */}
+          <div className="text-center mb-8">
+            <button
+              onClick={() => setSelectedCert({ title: "View All Credentials", description: "All certifications and achievements", imageUrl: "grid" })}
+              className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-full hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              View Credentials
+            </button>
+          </div>
+
+          {/* Certifications */}
+          <div className="mt-8">
             <h3 className="text-2xl font-bold mb-8 text-center text-indigo-400">
               Certifications & Achievements
             </h3>
@@ -141,22 +191,37 @@ export function Experience() {
             <div className="space-y-4">
               <p className="text-gray-300 text-lg">{selectedCert.description}</p>
               
-              {/* Certificate Image */}
-              <div className="bg-gray-700 rounded-lg p-4 text-center">
-                <img 
-                  src={selectedCert.imageUrl} 
-                  alt={selectedCert.title}
-                  className="max-w-full max-h-[600px] mx-auto rounded-lg shadow-lg"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.nextElementSibling.style.display = 'block';
-                  }}
-                />
-                <div className="text-gray-400 hidden">
-                  <Award className={`h-24 w-24 mx-auto mb-4 ${selectedCert.color}`} />
-                  <p className="text-lg">Certificate Image Not Available</p>
+              {/* Certificate Images - Side by Side Grid View */}
+              {selectedCert.imageUrl === "grid" ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {certifications.map((cert, index) => (
+                    <div key={index} className="bg-gray-700 rounded-lg p-2">
+                      <img 
+                        src={cert.imageUrl} 
+                        alt={cert.title}
+                        className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                      />
+                      <p className="text-sm text-center mt-2 text-gray-300">{cert.title}</p>
+                    </div>
+                  ))}
                 </div>
-              </div>
+              ) : (
+                <div className="bg-gray-700 rounded-lg p-4 text-center">
+                  <img 
+                    src={selectedCert.imageUrl} 
+                    alt={selectedCert.title}
+                    className="max-w-full max-h-[600px] mx-auto rounded-lg shadow-lg"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling.style.display = 'block';
+                    }}
+                  />
+                  <div className="text-gray-400 hidden">
+                    <Award className={`h-24 w-24 mx-auto mb-4 ${selectedCert.color}`} />
+                    <p className="text-lg">Certificate Image Not Available</p>
+                  </div>
+                </div>
+              )}
             </div>
           </DialogContent>
         </Dialog>

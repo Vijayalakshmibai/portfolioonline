@@ -125,3 +125,41 @@ export function Hero() {
     </section>
   );
 }
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+            <div className="flex justify-center space-x-6">
+              <a
+                href="https://linkedin.com/in/haresh-bharadwaj-r-566556229"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110 hover:rotate-3 text-2xl"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="https://github.com/hareshbharadwaj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110 hover:rotate-3 text-2xl"
+              >
+                <Github size={24} />
+              </a>
+              <a
+                href="mailto:hesh25012006@gmail.com"
+                className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110 hover:rotate-3 text-2xl"
+              >
+                <Mail size={24} />
+              </a>
+            </div>
+            <Button
+              onClick={() => window.open('/attached_assets/CV.pdf', '_blank')}
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              View Resume
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
