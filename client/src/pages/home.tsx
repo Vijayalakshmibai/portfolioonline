@@ -1,4 +1,6 @@
-import { Navigation } from '@/components/navigation';
+import { CenteredNavigation } from '@/components/nav-centered';
+import { ThreeBackground } from '@/components/three-background';
+import { ScrollReveal } from '@/components/scroll-reveal';
 import { Hero } from '@/components/hero';
 import { About } from '@/components/about';
 import { Projects } from '@/components/projects';
@@ -7,13 +9,24 @@ import { Contact } from '@/components/contact';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Navigation />
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Contact />
+    <div className="min-h-screen bg-gray-900 text-white relative">
+      <ThreeBackground />
+      <CenteredNavigation />
+      <ScrollReveal>
+        <Hero />
+      </ScrollReveal>
+      <ScrollReveal direction="left">
+        <About />
+      </ScrollReveal>
+      <ScrollReveal direction="up">
+        <Projects />
+      </ScrollReveal>
+      <ScrollReveal direction="right">
+        <Experience />
+      </ScrollReveal>
+      <ScrollReveal direction="up">
+        <Contact />
+      </ScrollReveal>
       
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-gray-800 py-8">

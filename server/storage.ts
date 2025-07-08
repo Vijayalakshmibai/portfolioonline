@@ -41,9 +41,9 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["React.js", "Node.js", "Express.js", "Local Storage", "VSCode", "HTML/CSS"],
         links: {
-          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_webdevelopment-ecommerce-homemadeproducts-activity-7332062155262894080-N79g?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2KRVx3fgY", // User will fill this
-          github: "https://github.com/hareshbharadwaj/Homemade_Marketplace_web", // User will fill this
-          live: "" // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_webdevelopment-ecommerce-homemadeproducts-activity-7332062155262894080-N79g?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2KRVx3fgY",
+          github: "https://github.com/hareshbharadwaj/Homemade_Marketplace_web",
+          demo: "/attached_assets/homemade_1751969238298.mp4"
         },
         category: "web-development",
         image: "shopping-cart"
@@ -219,7 +219,7 @@ export class MemStorage implements IStorage {
         technologies: ["Java", "Android Studio", "SQLite", "Firebase", "Material Design"],
         links: {
           linkedin: "", // User will fill this
-          github: "", // User will fill this
+          github: "https://github.com/hareshbharadwaj/Healthcare_app/releases/tag/v2.0", // User will fill this
           playstore: "" // User will fill this
         },
         category: "mobile-development",
@@ -261,7 +261,7 @@ export class MemStorage implements IStorage {
         technologies: ["Java", "Android Studio", "Firebase", "Streamlit", "Material Design"],
         links: {
           linkedin: "", // User will fill this
-          github: "", // User will fill this
+          github: "https://github.com/hareshbharadwaj/Urban_app/releases/tag/v2.0", // User will fill this
           demo: "" // User will fill this
         },
         category: "mobile-development",

@@ -12,14 +12,14 @@ export function Hero() {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center animate-slide-up">
-          <div className="w-64 h-64 mx-auto mb-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 p-2 animate-float animate-glow">
-            <div className="w-full h-full rounded-full overflow-hidden">
+          <div className="w-80 h-96 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 p-1 animate-float animate-glow shadow-2xl">
+            <div className="w-full h-full rounded-2xl overflow-hidden">
               <img 
                 src="/attached_assets/profilepic.jpg" 
                 alt="Haresh Bharadwaj R"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
                 onError={(e) => {
-                  e.currentTarget.src = "https://via.placeholder.com/256x256/6366f1/ffffff?text=HBR";
+                  e.currentTarget.src = "https://via.placeholder.com/320x384/6366f1/ffffff?text=HBR";
                 }}
               />
             </div>
@@ -49,29 +49,37 @@ export function Hero() {
             </Button>
           </div>
           
-          <div className="flex justify-center space-x-6">
-            <a
-              href="https://linkedin.com/in/haresh-bharadwaj-r-566556229"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-indigo-400 transition-colors text-2xl"
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+            <div className="flex justify-center space-x-6">
+              <a
+                href="https://linkedin.com/in/haresh-bharadwaj-r-566556229"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110 hover:rotate-3 text-2xl"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="https://github.com/hareshbharadwaj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110 hover:rotate-3 text-2xl"
+              >
+                <Github size={24} />
+              </a>
+              <a
+                href="mailto:hesh25012006@gmail.com"
+                className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110 hover:rotate-3 text-2xl"
+              >
+                <Mail size={24} />
+              </a>
+            </div>
+            <Button
+              onClick={() => window.open('/attached_assets/CV.pdf', '_blank')}
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="https://github.com/hareshbharadwaj"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-indigo-400 transition-colors text-2xl"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="mailto:hesh25012006@gmail.com"
-              className="text-gray-400 hover:text-indigo-400 transition-colors text-2xl"
-            >
-              <Mail size={24} />
-            </a>
+              View Resume
+            </Button>
           </div>
         </div>
       </div>
