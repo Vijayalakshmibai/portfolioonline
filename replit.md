@@ -95,6 +95,10 @@ Changelog:
 - July 08, 2025: Implemented "View Credentials" button showing certificates side-by-side
 - July 08, 2025: Enhanced Three.js background with continuous multi-axis animations
 - July 08, 2025: Added objective section and restructured hero content flow
+- July 08, 2025: Added proper padding to hero section for laptop screens
+- July 08, 2025: Integrated LOR documents into unified timeline structure
+- July 08, 2025: Implemented Jarvis-like AI background animations with scanning lines
+- July 08, 2025: Added relevant video/image assets to project cards
 ```
 
 ## User Preferences

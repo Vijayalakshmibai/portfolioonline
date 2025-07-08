@@ -126,73 +126,158 @@ export function Experience() {
             ))}
           </div>
 
-          {/* Letters of Recommendation - Side by Side with Timeline on Laptop */}
+          {/* Integrated Timeline with LOR Documents */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-8 text-center text-purple-400">
-              Letters of Recommendation
-            </h3>
-            <div className="lg:grid lg:grid-cols-2 lg:gap-12 space-y-8 lg:space-y-0">
-              {/* Timeline Column */}
-              <div className="lg:order-1">
-                <div className="space-y-6">
-                  <Card 
-                    className="bg-gray-800 border-gray-700 cursor-pointer hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 project-card"
-                    onClick={() => window.open('/attached_assets/LOR Corizo_1751970728640.pdf', '_blank')}
-                  >
-                    <CardContent className="p-4 flex items-center">
-                      <Award className="h-6 w-6 mr-4 text-indigo-400" />
-                      <div className="flex-1">
-                        <h4 className="font-semibold">Corizo Edutech</h4>
-                        <p className="text-gray-400 text-sm">Letter of Recommendation - Web Development</p>
-                      </div>
-                      <div className="text-gray-400 text-sm">
-                        View PDF
-                      </div>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card 
-                    className="bg-gray-800 border-gray-700 cursor-pointer hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 project-card"
-                    onClick={() => window.open('/attached_assets/prodigy infotech Letter of Recommendation_1751970745885.pdf', '_blank')}
-                  >
-                    <CardContent className="p-4 flex items-center">
-                      <Award className="h-6 w-6 mr-4 text-purple-400" />
-                      <div className="flex-1">
-                        <h4 className="font-semibold">Prodigy InfoTech</h4>
-                        <p className="text-gray-400 text-sm">Letter of Recommendation - Web Development Intern</p>
-                      </div>
-                      <div className="text-gray-400 text-sm">
-                        View PDF
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-0.5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-cyan-500 animate-pulse"></div>
               
-              {/* Timeline Visual - Only shown on larger screens */}
-              <div className="hidden lg:block lg:order-2">
+              <div className="space-y-16">
+                {/* Corizo Experience with LOR */}
                 <div className="relative">
-                  <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 to-purple-500"></div>
-                  <div className="space-y-8">
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center relative z-10">
-                        <Award className="w-4 h-4 text-white" />
-                      </div>
-                      <div className="ml-6">
-                        <h4 className="font-semibold text-white">Corizo Edutech</h4>
-                        <p className="text-gray-400 text-sm">2024 - Web Development Internship</p>
+                  {/* Desktop Layout */}
+                  <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                    {/* Company Details - Left */}
+                    <div className="text-right pr-8">
+                      <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:bg-gray-700/50 transition-all duration-300">
+                        <div className="flex items-center justify-end mb-3">
+                          <Briefcase className="h-6 w-6 text-indigo-400 mr-2" />
+                          <h3 className="text-xl font-semibold text-white">Web Development Trainee</h3>
+                        </div>
+                        <h4 className="text-lg text-indigo-400 mb-2">Corizo, Chennai</h4>
+                        <p className="text-gray-400 text-sm mb-3">September 2024 - November 2024</p>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          Developed "Foodie", a full-stack multi-user web application with comprehensive user and admin modules, featuring cart management, payments, and analytics.
+                        </p>
                       </div>
                     </div>
                     
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center relative z-10">
-                        <Award className="w-4 h-4 text-white" />
+                    {/* LOR Document - Right */}
+                    <div className="pl-8">
+                      <Card 
+                        className="bg-gray-800/50 backdrop-blur-sm border-gray-700/50 cursor-pointer hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"
+                        onClick={() => window.open('/attached_assets/LOR Corizo_1751970728640.pdf', '_blank')}
+                      >
+                        <CardContent className="p-6">
+                          <div className="flex items-center mb-4">
+                            <Award className="h-6 w-6 mr-3 text-indigo-400" />
+                            <h4 className="font-semibold text-white">Letter of Recommendation</h4>
+                          </div>
+                          <p className="text-gray-400 text-sm mb-3">Official recommendation from Corizo Edutech</p>
+                          <div className="text-indigo-400 text-sm font-medium">View PDF →</div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </div>
+
+                  {/* Mobile Layout */}
+                  <div className="lg:hidden ml-12">
+                    <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 mb-4">
+                      <div className="flex items-center mb-3">
+                        <Briefcase className="h-6 w-6 text-indigo-400 mr-2" />
+                        <h3 className="text-xl font-semibold text-white">Web Development Trainee</h3>
                       </div>
-                      <div className="ml-6">
-                        <h4 className="font-semibold text-white">Prodigy InfoTech</h4>
-                        <p className="text-gray-400 text-sm">2024 - Web Development Internship</p>
+                      <h4 className="text-lg text-indigo-400 mb-2">Corizo, Chennai</h4>
+                      <p className="text-gray-400 text-sm mb-3">September 2024 - November 2024</p>
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        Developed "Foodie", a full-stack multi-user web application with comprehensive user and admin modules, featuring cart management, payments, and analytics.
+                      </p>
+                    </div>
+                    
+                    <Card 
+                      className="bg-gray-800/50 backdrop-blur-sm border-gray-700/50 cursor-pointer hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"
+                      onClick={() => window.open('/attached_assets/LOR Corizo_1751970728640.pdf', '_blank')}
+                    >
+                      <CardContent className="p-4">
+                        <div className="flex items-center">
+                          <Award className="h-6 w-6 mr-3 text-indigo-400" />
+                          <div className="flex-1">
+                            <h4 className="font-semibold text-white">Letter of Recommendation</h4>
+                            <p className="text-gray-400 text-sm">Official recommendation from Corizo Edutech</p>
+                          </div>
+                          <div className="text-indigo-400 text-sm">View PDF</div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  {/* Timeline Node */}
+                  <div className="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 top-6 w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center z-10 animate-pulse">
+                    <Briefcase className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+
+                {/* Prodigy InfoTech Experience with LOR */}
+                <div className="relative">
+                  {/* Desktop Layout */}
+                  <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                    {/* LOR Document - Left */}
+                    <div className="pr-8">
+                      <Card 
+                        className="bg-gray-800/50 backdrop-blur-sm border-gray-700/50 cursor-pointer hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"
+                        onClick={() => window.open('/attached_assets/prodigy infotech Letter of Recommendation_1751970745885.pdf', '_blank')}
+                      >
+                        <CardContent className="p-6">
+                          <div className="flex items-center mb-4">
+                            <Award className="h-6 w-6 mr-3 text-purple-400" />
+                            <h4 className="font-semibold text-white">Letter of Recommendation</h4>
+                          </div>
+                          <p className="text-gray-400 text-sm mb-3">Official recommendation from Prodigy InfoTech</p>
+                          <div className="text-purple-400 text-sm font-medium">View PDF →</div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                    
+                    {/* Company Details - Right */}
+                    <div className="pl-8">
+                      <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:bg-gray-700/50 transition-all duration-300">
+                        <div className="flex items-center mb-3">
+                          <Code className="h-6 w-6 text-purple-400 mr-2" />
+                          <h3 className="text-xl font-semibold text-white">Web Developer Intern</h3>
+                        </div>
+                        <h4 className="text-lg text-purple-400 mb-2">Prodigy Infotech (Online)</h4>
+                        <p className="text-gray-400 text-sm mb-3">June 2024 - July 2024</p>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          Designed and developed multiple frontend projects including responsive landing pages, interactive applications, and weather app with live API integration.
+                        </p>
                       </div>
                     </div>
+                  </div>
+
+                  {/* Mobile Layout */}
+                  <div className="lg:hidden ml-12">
+                    <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 mb-4">
+                      <div className="flex items-center mb-3">
+                        <Code className="h-6 w-6 text-purple-400 mr-2" />
+                        <h3 className="text-xl font-semibold text-white">Web Developer Intern</h3>
+                      </div>
+                      <h4 className="text-lg text-purple-400 mb-2">Prodigy Infotech (Online)</h4>
+                      <p className="text-gray-400 text-sm mb-3">June 2024 - July 2024</p>
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        Designed and developed multiple frontend projects including responsive landing pages, interactive applications, and weather app with live API integration.
+                      </p>
+                    </div>
+                    
+                    <Card 
+                      className="bg-gray-800/50 backdrop-blur-sm border-gray-700/50 cursor-pointer hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"
+                      onClick={() => window.open('/attached_assets/prodigy infotech Letter of Recommendation_1751970745885.pdf', '_blank')}
+                    >
+                      <CardContent className="p-4">
+                        <div className="flex items-center">
+                          <Award className="h-6 w-6 mr-3 text-purple-400" />
+                          <div className="flex-1">
+                            <h4 className="font-semibold text-white">Letter of Recommendation</h4>
+                            <p className="text-gray-400 text-sm">Official recommendation from Prodigy InfoTech</p>
+                          </div>
+                          <div className="text-purple-400 text-sm">View PDF</div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  {/* Timeline Node */}
+                  <div className="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 top-6 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center z-10 animate-pulse">
+                    <Code className="w-4 h-4 text-white" />
                   </div>
                 </div>
               </div>

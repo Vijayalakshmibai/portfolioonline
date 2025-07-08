@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/navbar';
 import { ThreeBackground } from '@/components/three-background';
+import { JarvisBackground } from '@/components/jarvis-background';
 import { ScrollReveal } from '@/components/scroll-reveal';
 import { Hero } from '@/components/hero';
 import { About } from '@/components/about';
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white relative">
       <ThreeBackground />
+      <JarvisBackground />
       <Navbar />
       <ScrollReveal>
         <Hero />

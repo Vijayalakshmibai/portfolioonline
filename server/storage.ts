@@ -67,7 +67,8 @@ export class MemStorage implements IStorage {
           demo: "/attached_assets/foodie-major project_1751968207216.mp4"
         },
         category: "web-development",
-        image: "utensils"
+        image: "/attached_assets/foodie-major project_1751968207216.mp4",
+        imageType: "video"
       },
       {
         title: "Frontend Development Showcase",
@@ -88,7 +89,8 @@ export class MemStorage implements IStorage {
           portfolio: "" // User will fill this
         },
         category: "web-development",
-        image: "code"
+        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop&q=80",
+        imageType: "image"
       },
       
       // Computer Vision Projects
@@ -110,7 +112,8 @@ export class MemStorage implements IStorage {
           video: "/attached_assets/hand.mp4"
         },
         category: "computer-vision",
-        image: "eye"
+        image: "/attached_assets/hand.mp4",
+        imageType: "video"
       },
       {
         title: "Screen Painter",
@@ -130,7 +133,8 @@ export class MemStorage implements IStorage {
           video: "/attached_assets/paint.mp4"
         },
         category: "computer-vision",
-        image: "eye"
+        image: "/attached_assets/paint.mp4",
+        imageType: "video"
       },
       {
         title: "Snake Game with Hand Control",
@@ -150,7 +154,8 @@ export class MemStorage implements IStorage {
           video: "/attached_assets/snake.mp4"
         },
         category: "computer-vision",
-        image: "eye"
+        image: "/attached_assets/snake.mp4",
+        imageType: "video"
       },
       {
         title: "Subway Surfers Hand Control",
@@ -170,7 +175,8 @@ export class MemStorage implements IStorage {
           video: "/attached_assets/subway.mp4"
         },
         category: "computer-vision",
-        image: "eye"
+        image: "/attached_assets/subway.mp4",
+        imageType: "video"
       },
       
       // Machine Learning Research
