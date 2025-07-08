@@ -15,7 +15,7 @@ export function Hero() {
           <div className="w-48 h-48 mx-auto mb-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 p-1">
             <div className="w-full h-full rounded-full overflow-hidden">
               <img 
-                src="/attached_assets/WhatsApp Image 2025-07-08 at 12.59.58_550b4aa3_1751960682094.jpg" 
+                src="attached_assets/WhatsApp Image 2025-07-08 at 12.59.58_550b4aa3_1751960682094.jpg" 
                 alt="Haresh Bharadwaj R"
                 className="w-full h-full object-cover"
               />

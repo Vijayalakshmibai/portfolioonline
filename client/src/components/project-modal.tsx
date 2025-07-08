@@ -1,4 +1,4 @@
-import { X, ExternalLink, CheckCircle, User, Cog, Settings } from 'lucide-react';
+import { X, ExternalLink, CheckCircle, User, Cog, Settings, Eye } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
