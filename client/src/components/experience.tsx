@@ -1,0 +1,115 @@
+import { Briefcase, Code, Award } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+
+export function Experience() {
+  const experiences = [
+    {
+      title: "Web Development Trainee",
+      company: "Corizo, Chennai",
+      period: "September 2024 - November 2024",
+      description: "Developed \"Foodie\", a full-stack multi-user web application with comprehensive user and admin modules, featuring cart management, payments, and analytics.",
+      icon: Briefcase,
+      color: "text-indigo-400"
+    },
+    {
+      title: "Web Developer Intern",
+      company: "Prodigy Infotech (Online)",
+      period: "June 2024 - July 2024",
+      description: "Designed and developed multiple frontend projects including responsive landing pages, interactive applications, and weather app with live API integration.",
+      icon: Code,
+      color: "text-purple-400"
+    }
+  ];
+
+  const certifications = [
+    {
+      title: "Oracle Certified DBMS Specialist",
+      description: "Database Management Systems",
+      color: "text-indigo-400"
+    },
+    {
+      title: "FreeCodeCamp JavaScript Developer",
+      description: "JavaScript Development",
+      color: "text-purple-400"
+    },
+    {
+      title: "IBM SQL & Relational DB",
+      description: "Database Technologies",
+      color: "text-green-400"
+    },
+    {
+      title: "CISCO Networking & Cybersecurity",
+      description: "Network Technologies",
+      color: "text-blue-400"
+    },
+    {
+      title: "DevTown Campus Ambassador",
+      description: "Leadership & Community",
+      color: "text-orange-400"
+    },
+    {
+      title: "SWAYAM Python & C Specialist",
+      description: "Programming Languages",
+      color: "text-yellow-400"
+    }
+  ];
+
+  return (
+    <section id="experience" className="py-20 bg-gray-800/50">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text">
+            Experience & Achievements
+          </h2>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          {/* Timeline */}
+          <div className="relative">
+            <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-indigo-500 to-purple-500"></div>
+            
+            {experiences.map((exp, index) => (
+              <div key={index} className="mb-12 flex flex-col md:flex-row items-start md:items-center">
+                <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:order-2 md:pl-8'} mb-4 md:mb-0`}>
+                  <Card className="bg-gray-800 border-gray-700 ml-8 md:ml-0">
+                    <CardContent className="p-6">
+                      <h3 className={`text-xl font-bold mb-2 ${exp.color}`}>
+                        {exp.title}
+                      </h3>
+                      <p className="text-gray-300 mb-2">{exp.company}</p>
+                      <p className="text-sm text-gray-400 mb-4">{exp.period}</p>
+                      <p className="text-gray-300">{exp.description}</p>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center">
+                  <exp.icon className="h-4 w-4 text-white" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Certifications */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-8 text-center text-indigo-400">
+              Certifications & Achievements
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {certifications.map((cert, index) => (
+                <Card key={index} className="bg-gray-800 border-gray-700">
+                  <CardContent className="p-4 flex items-center">
+                    <Award className={`h-6 w-6 mr-4 ${cert.color}`} />
+                    <div>
+                      <h4 className="font-semibold">{cert.title}</h4>
+                      <p className="text-gray-400 text-sm">{cert.description}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
