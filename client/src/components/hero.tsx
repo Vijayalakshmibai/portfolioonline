@@ -12,14 +12,14 @@ export function Hero() {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center animate-slide-up">
-          <div className="w-48 h-48 mx-auto mb-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 p-1 animate-float animate-glow">
+          <div className="w-64 h-64 mx-auto mb-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 p-2 animate-float animate-glow">
             <div className="w-full h-full rounded-full overflow-hidden">
               <img 
                 src="/attached_assets/profilepic.jpg" 
                 alt="Haresh Bharadwaj R"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
                 onError={(e) => {
-                  e.currentTarget.src = "https://via.placeholder.com/200x200/6366f1/ffffff?text=HBR";
+                  e.currentTarget.src = "https://via.placeholder.com/256x256/6366f1/ffffff?text=HBR";
                 }}
               />
             </div>

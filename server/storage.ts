@@ -62,9 +62,9 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["JavaScript", "Node.js", "Express.js", "MySQL", "HTML/CSS", "Bootstrap"],
         links: {
-          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_webdevelopment-firstproject-fullstackdevelopment-activity-7260217850185818112-Q0D5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgy", // User will fill this
-          github: "https://github.com/hareshbharadwaj/foodie-app", // User will fill this
-          demo: "" // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_webdevelopment-firstproject-fullstackdevelopment-activity-7260217850185818112-Q0D5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgy",
+          github: "https://github.com/hareshbharadwaj/foodie-app",
+          demo: "/attached_assets/foodie-major project_1751968207216.mp4"
         },
         category: "web-development",
         image: "utensils"

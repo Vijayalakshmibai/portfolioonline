@@ -190,6 +190,31 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           )}
 
+          {/* Video Section for Web Development Projects */}
+          {project.category === 'web-development' && (
+            <div>
+              {(() => {
+                const links = project.links as Record<string, string>;
+                const videoUrl = links.demo || links.video;
+                return videoUrl && videoUrl !== "" && videoUrl.includes('.mp4') ? (
+                  <div>
+                    <h3 className="text-xl font-bold text-green-400 mb-4">Project Demo</h3>
+                    <div className="bg-gray-700 rounded-lg p-4">
+                      <video 
+                        controls 
+                        className="w-full max-h-96 rounded-lg"
+                        preload="metadata"
+                      >
+                        <source src={videoUrl} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                ) : null;
+              })()}
+            </div>
+          )}
+
           {/* Links Section */}
           <div className="pt-4 border-t border-gray-700">
             <h3 className="text-xl font-bold text-indigo-400 mb-4">Project Links</h3>
