@@ -25,9 +25,10 @@ export class MemStorage implements IStorage {
 
   private initializeProjects() {
     const projectsData: InsertProject[] = [
+      // Web Development Projects
       {
         title: "Homemade Treasure",
-        description: "Full-stack e-commerce web application with modular viewer/uploader roles, real-time CRUD operations, and comprehensive user management.",
+        description: "Full-stack e-commerce web application with modular viewer/uploader roles and real-time CRUD operations.",
         detailedDescription: "A comprehensive full-stack e-commerce web application designed to connect local artisans with customers. The platform features distinct user roles including viewers and uploaders, enabling seamless product management and customer interaction.",
         features: [
           "Modular architecture with separate viewer and uploader roles",
@@ -35,56 +36,146 @@ export class MemStorage implements IStorage {
           "Advanced image handling and optimization",
           "Shopping cart functionality with persistent storage",
           "Product rating and review system",
-          "Order management and tracking",
-          "Responsive design for all devices",
-          "Secure user authentication and authorization"
+          "Order management and tracking"
         ],
-        technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Authentication", "Cloudinary", "Stripe API"],
+        technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Authentication", "Cloudinary"],
         links: {
-          live: "https://homemade-treasure.netlify.app",
-          github: "https://github.com/hareshbharadwaj/homemade-treasure"
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          live: "" // User will fill this
         },
         category: "web-development",
         image: "shopping-cart"
       },
       {
-        title: "Computer Vision Interactive Suite",
-        description: "Interactive applications using OpenCV and MediaPipe including Virtual Drawing App, Snake Game, and Subway Surfers Clone with gesture control.",
-        detailedDescription: "A collection of innovative computer vision applications leveraging OpenCV and MediaPipe for real-time hand tracking and gesture recognition. These projects demonstrate advanced computer vision techniques applied to interactive gaming and creative applications.",
+        title: "Foodie - Food Delivery Platform",
+        description: "Full-stack multi-user web application with user and admin modules, featuring cart management and payments.",
+        detailedDescription: "A comprehensive food delivery web application developed during training at Corizo. The platform features separate user and admin interfaces, complete order management system, and advanced analytics dashboard.",
+        features: [
+          "Multi-user authentication system",
+          "Separate user and admin dashboards",
+          "Shopping cart with persistent storage",
+          "Integrated payment gateway",
+          "Real-time order tracking",
+          "Comprehensive analytics and reporting"
+        ],
+        technologies: ["JavaScript", "Node.js", "Express.js", "MySQL", "HTML/CSS", "Bootstrap"],
+        links: {
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          demo: "" // User will fill this
+        },
+        category: "web-development",
+        image: "utensils"
+      },
+      {
+        title: "Frontend Development Showcase",
+        description: "Collection of responsive frontend projects including landing pages, stopwatch, and weather app with live API.",
+        detailedDescription: "A comprehensive collection of frontend projects developed during internship at Prodigy Infotech, demonstrating proficiency in modern web technologies, responsive design, and API integration.",
+        features: [
+          "Responsive design principles",
+          "Modern web technologies",
+          "API integration capabilities",
+          "Interactive user interfaces",
+          "Performance optimization",
+          "Cross-browser compatibility"
+        ],
+        technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "Weather API"],
+        links: {
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          portfolio: "" // User will fill this
+        },
+        category: "web-development",
+        image: "code"
+      },
+      
+      // Computer Vision Projects
+      {
+        title: "Hand Detection System",
+        description: "Real-time hand tracking application using OpenCV and MediaPipe for gesture recognition.",
+        detailedDescription: "Advanced computer vision application that uses MediaPipe for real-time hand detection and tracking. The system can identify hand landmarks and gestures with high precision.",
         features: [
           "Real-time hand tracking with high precision",
-          "Gesture-based interaction system",
-          "Dynamic color selection and drawing tools",
+          "Hand landmark detection",
+          "Gesture recognition capabilities",
           "Smooth input processing and noise reduction",
-          "Multi-application framework",
-          "Responsive game controls",
           "Cross-platform compatibility"
         ],
-        projects: [
-          {
-            name: "Virtual Drawing App",
-            description: "Enables precise gesture-based drawing with dynamic color selection and input smoothing for natural drawing experience."
-          },
-          {
-            name: "Snake Game",
-            description: "Classic snake game with responsive directional control using tracked finger positions for enhanced gameplay."
-          },
-          {
-            name: "Subway Surfers Clone",
-            description: "Action-triggered gameplay through real-time gesture recognition for seamless in-game navigation."
-          }
-        ],
-        technologies: ["Python", "OpenCV", "MediaPipe", "NumPy", "Pygame"],
+        technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
         links: {
-          github: "https://github.com/hareshbharadwaj/computer-vision-projects",
-          demo: "https://youtu.be/demo-video"
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          video: "" // User will provide video link
         },
         category: "computer-vision",
         image: "eye"
       },
       {
+        title: "Screen Painter",
+        description: "Virtual drawing application using hand gestures for precise gesture-based drawing with color selection.",
+        detailedDescription: "An innovative drawing application that enables users to draw in the air using hand gestures. Features dynamic color selection and input smoothing for a natural drawing experience.",
+        features: [
+          "Gesture-based drawing interface",
+          "Dynamic color selection system",
+          "Input smoothing for natural drawing",
+          "Real-time hand tracking",
+          "Multiple drawing modes"
+        ],
+        technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
+        links: {
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          video: "" // User will provide video link
+        },
+        category: "computer-vision",
+        image: "eye"
+      },
+      {
+        title: "Snake Game with Hand Control",
+        description: "Classic snake game with responsive directional control using tracked finger positions.",
+        detailedDescription: "A modern take on the classic snake game that uses hand gesture recognition for game controls. Players can control the snake's movement using finger positions for an enhanced gaming experience.",
+        features: [
+          "Hand gesture-based game controls",
+          "Real-time finger position tracking",
+          "Responsive directional control",
+          "Enhanced gameplay experience",
+          "Smooth game mechanics"
+        ],
+        technologies: ["Python", "OpenCV", "MediaPipe", "Pygame"],
+        links: {
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          video: "" // User will provide video link
+        },
+        category: "computer-vision",
+        image: "eye"
+      },
+      {
+        title: "Subway Surfers Clone",
+        description: "Action-triggered gameplay through real-time gesture recognition for seamless in-game navigation.",
+        detailedDescription: "A gesture-controlled clone of the popular Subway Surfers game. Uses real-time hand tracking to control character movements, providing an immersive gaming experience.",
+        features: [
+          "Real-time gesture recognition",
+          "Action-triggered gameplay",
+          "Seamless in-game navigation",
+          "Hand tracking integration",
+          "Smooth character controls"
+        ],
+        technologies: ["Python", "OpenCV", "MediaPipe", "Pygame"],
+        links: {
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          video: "" // User will provide video link
+        },
+        category: "computer-vision",
+        image: "eye"
+      },
+      
+      // Machine Learning Research
+      {
         title: "Orbital Collision Risk Prediction",
-        description: "Auto-encoder based machine learning classifier to predict satellite-space debris collisions, handling unbalanced datasets effectively.",
+        description: "Auto-encoder based machine learning classifier to predict satellite-space debris collisions.",
         detailedDescription: "An advanced machine learning system developed for the Star Submit competition at SIMATS. The project uses auto-encoder based hybrid classification to predict potential satellite-space debris collisions, addressing the critical challenge of space debris management.",
         features: [
           "Auto-encoder based feature extraction",
@@ -92,8 +183,7 @@ export class MemStorage implements IStorage {
           "Unbalanced dataset handling techniques",
           "Real-time collision risk assessment",
           "Comprehensive data preprocessing pipeline",
-          "Model performance optimization",
-          "Scalable architecture for large datasets"
+          "Model performance optimization"
         ],
         methodology: [
           "Data collection from space tracking databases",
@@ -104,171 +194,77 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
         links: {
-          paper: "https://research-paper-link.com",
-          github: "https://github.com/hareshbharadwaj/orbital-collision-prediction"
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          paper: "" // User will fill this
         },
         category: "machine-learning",
         image: "satellite"
       },
+      
+      // App Development
       {
-        title: "Foodie - Food Delivery Platform",
-        description: "Full-stack multi-user web application with user and admin modules, featuring cart management, payments, and comprehensive analytics.",
-        detailedDescription: "A comprehensive food delivery web application developed during training at Corizo. The platform features separate user and admin interfaces, complete order management system, and advanced analytics dashboard.",
+        title: "Healthcare Assistant App",
+        description: "Comprehensive healthcare management application with core health monitoring features.",
+        detailedDescription: "A healthcare assistant mobile application built with core health features and deployed as a capstone project. The app provides comprehensive health management tools for users.",
         features: [
-          "Multi-user authentication system",
-          "Separate user and admin dashboards",
-          "Shopping cart with persistent storage",
-          "Integrated payment gateway",
-          "Real-time order tracking",
-          "Restaurant management system",
-          "Comprehensive analytics and reporting",
-          "Cross-device compatibility via LAN access"
+          "Health metrics tracking",
+          "Medication reminders",
+          "Appointment scheduling",
+          "Emergency contacts",
+          "Health data visualization",
+          "User-friendly interface"
         ],
-        userFeatures: [
-          "User registration and profile management",
-          "Restaurant and menu browsing",
-          "Advanced search and filtering",
-          "Shopping cart management",
-          "Secure payment processing",
-          "Order history and tracking"
-        ],
-        adminFeatures: [
-          "Secure admin authentication",
-          "Product and menu management",
-          "Order management and fulfillment",
-          "User management and support",
-          "Analytics dashboard with insights",
-          "Revenue and performance tracking"
-        ],
-        technologies: ["JavaScript", "Node.js", "Express.js", "MySQL", "HTML/CSS", "Bootstrap", "Chart.js"],
+        technologies: ["Java", "Android Studio", "SQLite", "Firebase", "Material Design"],
         links: {
-          demo: "https://foodie-app-demo.com",
-          github: "https://github.com/hareshbharadwaj/foodie-app"
-        },
-        category: "web-development",
-        image: "utensils"
-      },
-      {
-        title: "Android Application Suite",
-        description: "Multiple Android applications including healthcare assistant, Tic-Tac-Toe with AI, and urban service booking app with analytics.",
-        detailedDescription: "A collection of Android applications developed using various frameworks and technologies, showcasing mobile development expertise across different domains including healthcare, gaming, and service management.",
-        features: [
-          "Multi-domain application development",
-          "Advanced user interface design",
-          "Real-time data synchronization",
-          "Secure authentication systems",
-          "Analytics and reporting features",
-          "Cross-platform compatibility"
-        ],
-        applications: [
-          {
-            name: "Healthcare Assistant App",
-            description: "Comprehensive healthcare management application with core health monitoring features",
-            features: [
-              "Health metrics tracking",
-              "Medication reminders",
-              "Appointment scheduling",
-              "Emergency contacts",
-              "Health data visualization"
-            ]
-          },
-          {
-            name: "Intelligent Tic-Tac-Toe",
-            description: "Classic game with rule-based AI implementation for challenging single-player gameplay",
-            features: [
-              "Rule-based AI opponent",
-              "Multiple difficulty levels",
-              "Game statistics tracking",
-              "Smooth animations",
-              "Score tracking system"
-            ]
-          },
-          {
-            name: "Urban Service Booking Platform",
-            description: "Comprehensive service booking application with dual user roles and analytics",
-            features: [
-              "User and admin role management",
-              "Real-time service booking",
-              "Secure authentication system",
-              "Rating and review system",
-              "Streamlit-based worker analytics",
-              "Service provider management"
-            ]
-          }
-        ],
-        technologies: ["Java", "Android Studio", "SQLite", "Firebase", "Streamlit", "Material Design"],
-        links: {
-          github: "https://github.com/hareshbharadwaj/android-apps",
-          playstore: "https://play.google.com/store/apps/healthcare-assistant"
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          playstore: "" // User will fill this
         },
         category: "mobile-development",
         image: "android"
       },
       {
-        title: "Frontend Development Showcase",
-        description: "Collection of responsive frontend projects including landing pages, interactive stopwatch, portfolio sites, and weather app with live API integration.",
-        detailedDescription: "A comprehensive collection of frontend projects developed during internship at Prodigy Infotech, demonstrating proficiency in modern web technologies, responsive design, and API integration.",
+        title: "Intelligent Tic-Tac-Toe",
+        description: "Classic game with rule-based AI implementation for challenging single-player gameplay.",
+        detailedDescription: "A modern implementation of the classic Tic-Tac-Toe game featuring an intelligent AI opponent with rule-based decision making for challenging gameplay.",
         features: [
-          "Responsive design principles",
-          "Modern web technologies",
-          "API integration capabilities",
-          "Interactive user interfaces",
-          "Performance optimization",
-          "Cross-browser compatibility"
+          "Rule-based AI opponent",
+          "Multiple difficulty levels",
+          "Game statistics tracking",
+          "Smooth animations",
+          "Score tracking system",
+          "Single-player mode"
         ],
-        projects: [
-          {
-            name: "Responsive Landing Pages",
-            description: "Multiple landing pages showcasing different design approaches and industries",
-            features: [
-              "Mobile-first responsive design",
-              "Modern CSS animations",
-              "Cross-browser compatibility",
-              "SEO optimization",
-              "Fast loading performance"
-            ]
-          },
-          {
-            name: "Interactive Stopwatch Application",
-            description: "Feature-rich stopwatch with advanced timing capabilities",
-            features: [
-              "Precise timing functionality",
-              "Lap time recording",
-              "Multiple timer modes",
-              "Local storage persistence",
-              "Keyboard shortcuts"
-            ]
-          },
-          {
-            name: "Personal Portfolio Sites",
-            description: "Professional portfolio websites with modern design principles",
-            features: [
-              "Interactive project galleries",
-              "Smooth scrolling navigation",
-              "Contact form integration",
-              "Social media integration",
-              "Performance optimization"
-            ]
-          },
-          {
-            name: "Weather Application",
-            description: "Real-time weather app with comprehensive meteorological data",
-            features: [
-              "Live weather API integration",
-              "Location-based weather data",
-              "Extended forecast display",
-              "Weather alerts and notifications",
-              "Interactive weather maps"
-            ]
-          }
-        ],
-        technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "Weather API", "Local Storage"],
+        technologies: ["Java", "Android Studio", "SQLite", "Material Design"],
         links: {
-          portfolio: "https://haresh-frontend-showcase.netlify.app",
-          github: "https://github.com/hareshbharadwaj/frontend-projects"
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          demo: "" // User will fill this
         },
-        category: "web-development",
-        image: "code"
+        category: "mobile-development",
+        image: "android"
+      },
+      {
+        title: "Urban Service Booking Platform",
+        description: "Service booking application with dual user roles and Streamlit-based worker analytics.",
+        detailedDescription: "A comprehensive urban service booking platform with user and admin roles, real-time booking capabilities, secure authentication, and advanced analytics dashboard.",
+        features: [
+          "User and admin role management",
+          "Real-time service booking",
+          "Secure authentication system",
+          "Rating and review system",
+          "Streamlit-based worker analytics",
+          "Service provider management"
+        ],
+        technologies: ["Java", "Android Studio", "Firebase", "Streamlit", "Material Design"],
+        links: {
+          linkedin: "", // User will fill this
+          github: "", // User will fill this
+          demo: "" // User will fill this
+        },
+        category: "mobile-development",
+        image: "android"
       }
     ];
 
@@ -304,7 +300,18 @@ export class MemStorage implements IStorage {
 
   async createProject(insertProject: InsertProject): Promise<Project> {
     const id = this.currentProjectId++;
-    const project: Project = { ...insertProject, id };
+    const project: Project = { 
+      ...insertProject, 
+      id,
+      image: insertProject.image || null,
+      projects: insertProject.projects || null,
+      applications: insertProject.applications || null,
+      userFeatures: insertProject.userFeatures || null,
+      adminFeatures: insertProject.adminFeatures || null,
+      methodology: insertProject.methodology || null,
+      detailedDescription: insertProject.detailedDescription || null,
+      links: insertProject.links || null
+    };
     this.projects.set(id, project);
     return project;
   }

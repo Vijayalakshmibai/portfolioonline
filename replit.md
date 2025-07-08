@@ -83,7 +83,12 @@ A modern, responsive portfolio website built with React and Express showcasing a
 
 ```
 Changelog:
-- July 08, 2025. Initial setup
+- July 08, 2025: Initial setup with dark designer theme
+- July 08, 2025: Added personal photo to hero section
+- July 08, 2025: Reorganized projects by categories (Web Dev, Computer Vision, ML Research, App Dev)
+- July 08, 2025: Created 11 projects with placeholder links for user to fill
+- July 08, 2025: Added video demo sections for computer vision projects
+- July 08, 2025: Set up structured link areas (LinkedIn, GitHub, Demo/Video)
 ```
 
 ## User Preferences

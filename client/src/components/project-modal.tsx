@@ -170,23 +170,87 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           </div>
 
-          {/* Links */}
-          {Object.keys(links).length > 0 && (
-            <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-700">
-              {Object.entries(links).map(([key, url]) => (
-                <Button
-                  key={key}
-                  asChild
-                  className="bg-indigo-600 hover:bg-indigo-700"
-                >
-                  <a href={url} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    {key.charAt(0).toUpperCase() + key.slice(1)}
-                  </a>
-                </Button>
-              ))}
+          {/* Video Section for Computer Vision Projects */}
+          {project.category === 'computer-vision' && (
+            <div>
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Project Demo</h3>
+              <div className="bg-gray-700 rounded-lg p-8 text-center">
+                <div className="text-gray-400 mb-4">
+                  <Eye className="h-16 w-16 mx-auto mb-4" />
+                  <p className="text-lg">Video Demo Available</p>
+                  <p className="text-sm">Click the video link below to view the demonstration</p>
+                </div>
+              </div>
             </div>
           )}
+
+          {/* Links Section */}
+          <div className="pt-4 border-t border-gray-700">
+            <h3 className="text-xl font-bold text-indigo-400 mb-4">Project Links</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* LinkedIn Post */}
+              <div className="bg-gray-700 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-400 mb-2">LinkedIn Post</h4>
+                {links.linkedin && links.linkedin !== "" ? (
+                  <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
+                    <a href={links.linkedin} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      View Post
+                    </a>
+                  </Button>
+                ) : (
+                  <div className="text-gray-400 text-sm text-center py-2">
+                    Link to be added soon
+                  </div>
+                )}
+              </div>
+
+              {/* GitHub Repository */}
+              <div className="bg-gray-700 rounded-lg p-4">
+                <h4 className="font-semibold text-gray-300 mb-2">GitHub Repo</h4>
+                {links.github && links.github !== "" ? (
+                  <Button asChild className="w-full bg-gray-600 hover:bg-gray-700">
+                    <a href={links.github} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      View Code
+                    </a>
+                  </Button>
+                ) : (
+                  <div className="text-gray-400 text-sm text-center py-2">
+                    Repository link coming soon
+                  </div>
+                )}
+              </div>
+
+              {/* Live Demo/Video/Other */}
+              <div className="bg-gray-700 rounded-lg p-4">
+                <h4 className="font-semibold text-green-400 mb-2">
+                  {project.category === 'computer-vision' ? 'Video Demo' : 
+                   links.live ? 'Live Demo' : 
+                   links.demo ? 'Demo' : 
+                   links.video ? 'Video' : 
+                   links.paper ? 'Research Paper' : 
+                   links.playstore ? 'Play Store' : 
+                   links.portfolio ? 'Portfolio' : 'Demo'}
+                </h4>
+                {(() => {
+                  const demoLink = links.live || links.demo || links.video || links.paper || links.playstore || links.portfolio;
+                  return demoLink && demoLink !== "" ? (
+                    <Button asChild className="w-full bg-green-600 hover:bg-green-700">
+                      <a href={demoLink} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        {project.category === 'computer-vision' ? 'Watch Demo' : 'View Demo'}
+                      </a>
+                    </Button>
+                  ) : (
+                    <div className="text-gray-400 text-sm text-center py-2">
+                      {project.category === 'computer-vision' ? 'Video demo coming soon' : 'Demo link coming soon'}
+                    </div>
+                  );
+                })()}
+              </div>
+            </div>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
