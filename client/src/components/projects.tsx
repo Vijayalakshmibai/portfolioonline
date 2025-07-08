@@ -134,16 +134,16 @@ export function Projects() {
                   onClick={() => toggleCategory(categoryKey)}
                 >
                   <CardContent className="p-6 text-center">
-                    <CategoryIcon className={`h-12 w-12 mx-auto mb-4 ${category.color}`} />
+                    <CategoryIcon className={`h-12 w-12 mx-auto mb-4 ${category.color} animate-bounce-gentle`} />
                     <h3 className="font-semibold mb-2">{category.title}</h3>
                     <p className="text-sm text-gray-400 mb-2">{category.description}</p>
-                    <Badge variant="secondary" className="bg-gray-600/20 text-gray-300">
+                    <Badge variant="secondary" className="bg-gray-600/20 text-gray-300 animate-pulse-slow">
                       {categoryProjects.length} project{categoryProjects.length > 1 ? 's' : ''}
                     </Badge>
                     <div className="mt-3">
                       <ArrowRight className={`h-4 w-4 mx-auto transition-transform ${
                         isExpanded ? 'rotate-90' : ''
-                      }`} />
+                      } animate-bounce-gentle`} />
                     </div>
                   </CardContent>
                 </Card>

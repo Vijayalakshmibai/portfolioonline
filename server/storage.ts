@@ -105,7 +105,7 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
         links: {
-          linkedin: "", // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-opencv-mediapipe-activity-7332114830104961025-Hntg?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",// User will fill this
           github: "https://github.com/hareshbharadwaj/CV_hand_detection", // User will fill this
           video: "attached_assets/hand.mp4"
         },
@@ -125,7 +125,7 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
         links: {
-          linkedin: "", // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-gesturerecognition-virtualdrawing-activity-7332274282397417474-Hub2?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_painter", // User will fill this
           video: "attached_assets/paint.mp4"
         },
@@ -145,7 +145,7 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "OpenCV", "MediaPipe", "Pygame"],
         links: {
-          linkedin: "", // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_hand-controlled-snake-game-with-opencv-activity-7336788164998479872-scKj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_snake_game", // User will fill this
           video: "attached_assets/snake.mp4"
         },
@@ -153,7 +153,7 @@ export class MemStorage implements IStorage {
         image: "eye"
       },
       {
-        title: "Subway Surfers Clone",
+        title: "Subway Surfers Hand Control",
         description: "Action-triggered gameplay through real-time gesture recognition for seamless in-game navigation.",
         detailedDescription: "A gesture-controlled clone of the popular Subway Surfers game. Uses real-time hand tracking to control character movements, providing an immersive gaming experience.",
         features: [
@@ -165,7 +165,7 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "OpenCV", "MediaPipe", "Pygame"],
         links: {
-          linkedin: "", // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-opencv-mediapipe-activity-7339332599707811840-VYjy?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_Subway", // User will fill this
           video: "attached_assets/subway.mp4"
         },
@@ -195,7 +195,7 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
         links: {
-          linkedin: "", // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_machinelearning-spacedebris-aerospaceai-activity-7340638750441357315-hYfh?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
           github: "", // User will fill this
           paper: "" // User will fill this
         },
@@ -240,7 +240,7 @@ export class MemStorage implements IStorage {
         technologies: ["Java", "Android Studio", "SQLite", "Material Design"],
         links: {
           linkedin: "", // User will fill this
-          github: "", // User will fill this
+          github: "https://github.com/hareshbharadwaj/tictactoe-android-app/releases/tag/v1.0", // User will fill this
           demo: "" // User will fill this
         },
         category: "mobile-development",

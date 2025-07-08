@@ -166,12 +166,26 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           {project.category === 'computer-vision' && (
             <div>
               <h3 className="text-xl font-bold text-purple-400 mb-4">Project Demo</h3>
-              <div className="bg-gray-700 rounded-lg p-8 text-center">
-                <div className="text-gray-400 mb-4">
-                  <Eye className="h-16 w-16 mx-auto mb-4" />
-                  <p className="text-lg">Video Demo Available</p>
-                  <p className="text-sm">Click the video link below to view the demonstration</p>
-                </div>
+              <div className="bg-gray-700 rounded-lg p-4">
+                {(() => {
+                  const links = project.links as Record<string, string>;
+                  const videoUrl = links.video;
+                  return videoUrl && videoUrl !== "" ? (
+                    <video 
+                      controls 
+                      className="w-full max-h-96 rounded-lg"
+                      preload="metadata"
+                    >
+                      <source src={videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <div className="text-gray-400 text-center py-8">
+                      <Eye className="h-16 w-16 mx-auto mb-4" />
+                      <p className="text-lg">Video Demo Coming Soon</p>
+                    </div>
+                  );
+                })()}
               </div>
             </div>
           )}
@@ -201,21 +215,21 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               </div>
             )}
 
-            {/* App Development - Only APK Download */}
+            {/* App Development - Only GitHub Release/APK Download */}
             {project.category === 'mobile-development' && (
               <div className="flex justify-center">
                 <div className="bg-gray-700 rounded-lg p-4 w-full max-w-md">
-                  <h4 className="font-semibold text-green-400 mb-2 text-center">APK Download</h4>
-                  {links.apk && links.apk !== "" ? (
+                  <h4 className="font-semibold text-green-400 mb-2 text-center">Download App</h4>
+                  {(links.apk || links.github) && (links.apk !== "" || links.github !== "") ? (
                     <Button asChild className="w-full bg-green-600 hover:bg-green-700">
-                      <a href={links.apk} target="_blank" rel="noopener noreferrer">
+                      <a href={links.apk || links.github} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        Download APK
+                        {links.apk ? 'Download APK' : 'View on GitHub'}
                       </a>
                     </Button>
                   ) : (
                     <div className="text-gray-400 text-sm text-center py-2">
-                      APK download coming soon
+                      Download link coming soon
                     </div>
                   )}
                 </div>
