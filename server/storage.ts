@@ -107,7 +107,7 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-opencv-mediapipe-activity-7332114830104961025-Hntg?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",// User will fill this
           github: "https://github.com/hareshbharadwaj/CV_hand_detection", // User will fill this
-          video: "attached_assets/hand.mp4"
+          video: "/attached_assets/hand.mp4"
         },
         category: "computer-vision",
         image: "eye"
@@ -127,7 +127,7 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-gesturerecognition-virtualdrawing-activity-7332274282397417474-Hub2?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_painter", // User will fill this
-          video: "attached_assets/paint.mp4"
+          video: "/attached_assets/paint.mp4"
         },
         category: "computer-vision",
         image: "eye"
@@ -147,7 +147,7 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_hand-controlled-snake-game-with-opencv-activity-7336788164998479872-scKj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_snake_game", // User will fill this
-          video: "attached_assets/snake.mp4"
+          video: "/attached_assets/snake.mp4"
         },
         category: "computer-vision",
         image: "eye"
@@ -167,7 +167,7 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-opencv-mediapipe-activity-7339332599707811840-VYjy?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_Subway", // User will fill this
-          video: "attached_assets/subway.mp4"
+          video: "/attached_assets/subway.mp4"
         },
         category: "computer-vision",
         image: "eye"
