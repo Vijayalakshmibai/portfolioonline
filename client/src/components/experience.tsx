@@ -1,10 +1,37 @@
 import { Briefcase, Code, Award, X } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { useState } from 'react';
 
 export function Experience() {
   const [selectedCert, setSelectedCert] = useState<any>(null);
+  
+  const experienceCredentials = [
+    {
+      title: "Corizo LinkedIn Profile",
+      description: "Professional LinkedIn presence showcasing Corizo internship",
+      imageUrl: "/attached_assets/corizo li _1751970802230.jpg",
+      color: "text-blue-400"
+    },
+    {
+      title: "Corizo Offer Letter",
+      description: "Official offer letter from Corizo Edutech",
+      imageUrl: "/attached_assets/li corizo Offer_Letter[1]_(1)[1]_1751970779198.pdf",
+      color: "text-indigo-400"
+    },
+    {
+      title: "Prodigy InfoTech Certificate",
+      description: "Completion certificate from Prodigy InfoTech internship",
+      imageUrl: "/attached_assets/prodigy infotech Certificate_1751970832993.pdf",
+      color: "text-purple-400"
+    },
+    {
+      title: "Campus Training",
+      description: "Campus-based technical training certification",
+      imageUrl: "/attached_assets/campuss_1751968636489.png",
+      color: "text-pink-400"
+    }
+  ];
   
   const experiences = [
     {
@@ -99,50 +126,83 @@ export function Experience() {
             ))}
           </div>
 
-          {/* Letters of Recommendation */}
+          {/* Letters of Recommendation - Side by Side with Timeline on Laptop */}
           <div className="mt-16">
             <h3 className="text-2xl font-bold mb-8 text-center text-purple-400">
               Letters of Recommendation
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <Card 
-                className="bg-gray-800 border-gray-700 cursor-pointer hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 project-card"
-                onClick={() => window.open('/attached_assets/LOR Corizo_1751970728640.pdf', '_blank')}
-              >
-                <CardContent className="p-4 flex items-center">
-                  <Award className="h-6 w-6 mr-4 text-indigo-400" />
-                  <div className="flex-1">
-                    <h4 className="font-semibold">Corizo Edutech</h4>
-                    <p className="text-gray-400 text-sm">Letter of Recommendation - Web Development</p>
-                  </div>
-                  <div className="text-gray-400 text-sm">
-                    View PDF
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="lg:grid lg:grid-cols-2 lg:gap-12 space-y-8 lg:space-y-0">
+              {/* Timeline Column */}
+              <div className="lg:order-1">
+                <div className="space-y-6">
+                  <Card 
+                    className="bg-gray-800 border-gray-700 cursor-pointer hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 project-card"
+                    onClick={() => window.open('/attached_assets/LOR Corizo_1751970728640.pdf', '_blank')}
+                  >
+                    <CardContent className="p-4 flex items-center">
+                      <Award className="h-6 w-6 mr-4 text-indigo-400" />
+                      <div className="flex-1">
+                        <h4 className="font-semibold">Corizo Edutech</h4>
+                        <p className="text-gray-400 text-sm">Letter of Recommendation - Web Development</p>
+                      </div>
+                      <div className="text-gray-400 text-sm">
+                        View PDF
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card 
+                    className="bg-gray-800 border-gray-700 cursor-pointer hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 project-card"
+                    onClick={() => window.open('/attached_assets/prodigy infotech Letter of Recommendation_1751970745885.pdf', '_blank')}
+                  >
+                    <CardContent className="p-4 flex items-center">
+                      <Award className="h-6 w-6 mr-4 text-purple-400" />
+                      <div className="flex-1">
+                        <h4 className="font-semibold">Prodigy InfoTech</h4>
+                        <p className="text-gray-400 text-sm">Letter of Recommendation - Web Development Intern</p>
+                      </div>
+                      <div className="text-gray-400 text-sm">
+                        View PDF
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
               
-              <Card 
-                className="bg-gray-800 border-gray-700 cursor-pointer hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 project-card"
-                onClick={() => window.open('/attached_assets/prodigy infotech Letter of Recommendation_1751970745885.pdf', '_blank')}
-              >
-                <CardContent className="p-4 flex items-center">
-                  <Award className="h-6 w-6 mr-4 text-purple-400" />
-                  <div className="flex-1">
-                    <h4 className="font-semibold">Prodigy InfoTech</h4>
-                    <p className="text-gray-400 text-sm">Letter of Recommendation - Web Development Intern</p>
+              {/* Timeline Visual - Only shown on larger screens */}
+              <div className="hidden lg:block lg:order-2">
+                <div className="relative">
+                  <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 to-purple-500"></div>
+                  <div className="space-y-8">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center relative z-10">
+                        <Award className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="ml-6">
+                        <h4 className="font-semibold text-white">Corizo Edutech</h4>
+                        <p className="text-gray-400 text-sm">2024 - Web Development Internship</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center relative z-10">
+                        <Award className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="ml-6">
+                        <h4 className="font-semibold text-white">Prodigy InfoTech</h4>
+                        <p className="text-gray-400 text-sm">2024 - Web Development Internship</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-gray-400 text-sm">
-                    View PDF
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* View Credentials Button */}
           <div className="text-center mb-8">
             <button
-              onClick={() => setSelectedCert({ title: "View All Credentials", description: "All certifications and achievements", imageUrl: "grid" })}
+              onClick={() => setSelectedCert({ title: "Experience Credentials", description: "Professional credentials and achievements from internships", imageUrl: "experience-grid" })}
               className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-full hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               View Credentials
@@ -189,10 +249,30 @@ export function Experience() {
             </DialogHeader>
             
             <div className="space-y-4">
-              <p className="text-gray-300 text-lg">{selectedCert.description}</p>
               
               {/* Certificate Images - Side by Side Grid View */}
-              {selectedCert.imageUrl === "grid" ? (
+              {selectedCert.imageUrl === "experience-grid" ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {experienceCredentials.map((cred, index) => (
+                    <div key={index} className="bg-gray-700 rounded-lg p-2">
+                      <img 
+                        src={cred.imageUrl} 
+                        alt={cred.title}
+                        className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.nextElementSibling!.style.display = 'block';
+                        }}
+                      />
+                      <div className="text-center mt-2 hidden">
+                        <Award className="h-12 w-12 mx-auto mb-2 text-gray-400" />
+                        <p className="text-sm text-gray-400">Document Preview</p>
+                      </div>
+                      <p className="text-sm text-center mt-2 text-gray-300">{cred.title}</p>
+                    </div>
+                  ))}
+                </div>
+              ) : selectedCert.imageUrl === "grid" ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {certifications.map((cert, index) => (
                     <div key={index} className="bg-gray-700 rounded-lg p-2">
