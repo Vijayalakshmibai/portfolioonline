@@ -1,7 +1,11 @@
-import { Briefcase, Code, Award } from 'lucide-react';
+import { Briefcase, Code, Award, X } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { useState } from 'react';
 
 export function Experience() {
+  const [selectedCert, setSelectedCert] = useState<any>(null);
+  
   const experiences = [
     {
       title: "Web Development Trainee",
@@ -25,32 +29,38 @@ export function Experience() {
     {
       title: "Oracle Certified DBMS Specialist",
       description: "Database Management Systems",
-      color: "text-indigo-400"
+      color: "text-indigo-400",
+      imageUrl: "path/to/oracle-cert.jpg" // Replace with your certificate image path
     },
     {
       title: "FreeCodeCamp JavaScript Developer",
       description: "JavaScript Development",
-      color: "text-purple-400"
+      color: "text-purple-400",
+      imageUrl: "path/to/freecodecamp-cert.jpg" // Replace with your certificate image path
     },
     {
       title: "IBM SQL & Relational DB",
       description: "Database Technologies",
-      color: "text-green-400"
+      color: "text-green-400",
+      imageUrl: "path/to/ibm-cert.jpg" // Replace with your certificate image path
     },
     {
       title: "CISCO Networking & Cybersecurity",
       description: "Network Technologies",
-      color: "text-blue-400"
+      color: "text-blue-400",
+      imageUrl: "path/to/cisco-cert.jpg" // Replace with your certificate image path
     },
     {
       title: "DevTown Campus Ambassador",
       description: "Leadership & Community",
-      color: "text-orange-400"
+      color: "text-orange-400",
+      imageUrl: "path/to/devtown-cert.jpg" // Replace with your certificate image path
     },
     {
       title: "SWAYAM Python & C Specialist",
       description: "Programming Languages",
-      color: "text-yellow-400"
+      color: "text-yellow-400",
+      imageUrl: "path/to/swayam-cert.jpg" // Replace with your certificate image path
     }
   ];
 
@@ -96,12 +106,19 @@ export function Experience() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {certifications.map((cert, index) => (
-                <Card key={index} className="bg-gray-800 border-gray-700">
+                <Card 
+                  key={index} 
+                  className="bg-gray-800 border-gray-700 cursor-pointer hover:bg-gray-700 transition-colors"
+                  onClick={() => setSelectedCert(cert)}
+                >
                   <CardContent className="p-4 flex items-center">
                     <Award className={`h-6 w-6 mr-4 ${cert.color}`} />
-                    <div>
+                    <div className="flex-1">
                       <h4 className="font-semibold">{cert.title}</h4>
                       <p className="text-gray-400 text-sm">{cert.description}</p>
+                    </div>
+                    <div className="text-gray-400 text-sm">
+                      Click to view
                     </div>
                   </CardContent>
                 </Card>
@@ -110,6 +127,50 @@ export function Experience() {
           </div>
         </div>
       </div>
+
+      {/* Certification Modal */}
+      {selectedCert && (
+        <Dialog open={true} onOpenChange={() => setSelectedCert(null)}>
+          <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto bg-gray-800 border-gray-700">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold text-indigo-400 mb-4">
+                {selectedCert.title}
+              </DialogTitle>
+            </DialogHeader>
+            
+            <div className="space-y-4">
+              <p className="text-gray-300 text-lg">{selectedCert.description}</p>
+              
+              {/* Certificate Image */}
+              <div className="bg-gray-700 rounded-lg p-8 text-center">
+                {selectedCert.imageUrl && selectedCert.imageUrl !== "path/to/oracle-cert.jpg" && 
+                 selectedCert.imageUrl !== "path/to/freecodecamp-cert.jpg" && 
+                 selectedCert.imageUrl !== "path/to/ibm-cert.jpg" && 
+                 selectedCert.imageUrl !== "path/to/cisco-cert.jpg" && 
+                 selectedCert.imageUrl !== "path/to/devtown-cert.jpg" && 
+                 selectedCert.imageUrl !== "path/to/swayam-cert.jpg" ? (
+                  <img 
+                    src={selectedCert.imageUrl} 
+                    alt={selectedCert.title}
+                    className="max-w-full max-h-[500px] mx-auto rounded-lg shadow-lg"
+                  />
+                ) : (
+                  <div className="text-gray-400">
+                    <Award className={`h-24 w-24 mx-auto mb-4 ${selectedCert.color}`} />
+                    <p className="text-lg">Certificate Image</p>
+                    <p className="text-sm mt-2">
+                      To add your certificate image, update the imageUrl in the certifications array:
+                    </p>
+                    <code className="text-xs bg-gray-600 px-2 py-1 rounded mt-2 inline-block">
+                      imageUrl: "attached_assets/your-certificate-image.jpg"
+                    </code>
+                  </div>
+                )}
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+      )}
     </section>
   );
 }

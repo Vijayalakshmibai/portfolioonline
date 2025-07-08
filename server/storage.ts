@@ -36,12 +36,13 @@ export class MemStorage implements IStorage {
           "Advanced image handling and optimization",
           "Shopping cart functionality with persistent storage",
           "Product rating and review system",
-          "Order management and tracking"
+          "Order management and tracking",
+          "Hosted using Netlify "
         ],
-        technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Authentication", "Cloudinary"],
+        technologies: ["React.js", "Node.js", "Express.js", "Local Storage", "VSCode", "HTML/CSS"],
         links: {
-          linkedin: "", // User will fill this
-          github: "", // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_webdevelopment-ecommerce-homemadeproducts-activity-7332062155262894080-N79g?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2KRVx3fgY", // User will fill this
+          github: "https://github.com/hareshbharadwaj/Homemade_Marketplace_web", // User will fill this
           live: "" // User will fill this
         },
         category: "web-development",
@@ -62,7 +63,7 @@ export class MemStorage implements IStorage {
         technologies: ["JavaScript", "Node.js", "Express.js", "MySQL", "HTML/CSS", "Bootstrap"],
         links: {
           linkedin: "", // User will fill this
-          github: "", // User will fill this
+          github: "https://github.com/hareshbharadwaj/foodie-app", // User will fill this
           demo: "" // User will fill this
         },
         category: "web-development",
@@ -105,7 +106,7 @@ export class MemStorage implements IStorage {
         technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
         links: {
           linkedin: "", // User will fill this
-          github: "", // User will fill this
+          github: "https://github.com/hareshbharadwaj/CV_hand_detection", // User will fill this
           video: "" // User will provide video link
         },
         category: "computer-vision",
@@ -125,7 +126,7 @@ export class MemStorage implements IStorage {
         technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
         links: {
           linkedin: "", // User will fill this
-          github: "", // User will fill this
+          github: "https://github.com/hareshbharadwaj/CV_painter", // User will fill this
           video: "" // User will provide video link
         },
         category: "computer-vision",
@@ -145,7 +146,7 @@ export class MemStorage implements IStorage {
         technologies: ["Python", "OpenCV", "MediaPipe", "Pygame"],
         links: {
           linkedin: "", // User will fill this
-          github: "", // User will fill this
+          github: "https://github.com/hareshbharadwaj/CV_snake_game", // User will fill this
           video: "" // User will provide video link
         },
         category: "computer-vision",
@@ -165,7 +166,7 @@ export class MemStorage implements IStorage {
         technologies: ["Python", "OpenCV", "MediaPipe", "Pygame"],
         links: {
           linkedin: "", // User will fill this
-          github: "", // User will fill this
+          github: "https://github.com/hareshbharadwaj/CV_Subway", // User will fill this
           video: "" // User will provide video link
         },
         category: "computer-vision",
