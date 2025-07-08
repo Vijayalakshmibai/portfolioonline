@@ -62,7 +62,7 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["JavaScript", "Node.js", "Express.js", "MySQL", "HTML/CSS", "Bootstrap"],
         links: {
-          linkedin: "", // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_webdevelopment-firstproject-fullstackdevelopment-activity-7260217850185818112-Q0D5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgy", // User will fill this
           github: "https://github.com/hareshbharadwaj/foodie-app", // User will fill this
           demo: "" // User will fill this
         },
@@ -107,7 +107,7 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_hand_detection", // User will fill this
-          video: "" // User will provide video link
+          video: "attached_assets/hand.mp4"
         },
         category: "computer-vision",
         image: "eye"
@@ -127,7 +127,7 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_painter", // User will fill this
-          video: "" // User will provide video link
+          video: "attached_assets/paint.mp4"
         },
         category: "computer-vision",
         image: "eye"
@@ -147,7 +147,7 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_snake_game", // User will fill this
-          video: "" // User will provide video link
+          video: "attached_assets/snake.mp4"
         },
         category: "computer-vision",
         image: "eye"
@@ -167,7 +167,7 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_Subway", // User will fill this
-          video: "" // User will provide video link
+          video: "attached_assets/subway.mp4"
         },
         category: "computer-vision",
         image: "eye"
